@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>FC</h1>
+    <div class="touraku">
+      <select name="place" id="place">
+        <option value="">会場を選択してください</option>
+        <option value="[神奈川] 横浜アリーナ">[神奈川] 横浜アリーナ</option>
+        <option value="[大阪] 大阪城ホール">[大阪] 大阪城ホール</option>
+        <option value="[愛知] Aichi Sky Expo">[愛知] Aichi Sky Expo</option>
+        <option value="[静岡] エコパアリーナ">[静岡] エコパアリーナ</option>
+        <option value="[香川] あぶなきアリーナ">[香川] あぶなきアリーナ</option>
+        <option value="[北海道] 真駒内セキスイハイムアイスアリーナ">
+          [北海道] 真駒内セキスイハイムアイスアリーナ
+        </option>
+        <option value="[福岡] マリンメッセ福岡A館">
+          [福岡] マリンメッセ福岡A館
+        </option>
+        <option value="[新潟] 朱鷺メッセ新潟コンベンションセンター">
+          [新潟] 朱鷺メッセ新潟コンベンションセンター
+        </option>
+      </select>
+
+      <select name="amount" id="amount">
+        <option value="">枚数を選択してください</option>
+        <option value="1">1枚</option>
+        <option value="2">2枚</option>
+      </select>
+
+      <button class="application" id="requestbtn">お申し込み</button>
+    </div>
+
+    <div class="guidance">
+      <div class="guidance-text">
+        <p class="red">状態 : 抽選結果ご案内中</p>
+        <p>整理番号 : <span id="num"></span></p>
+      </div>
+
+      <div class="hope hidden">
+        <p>枚数 : <span id="last-amount"></span></p>
+        <p class="space">第１希望公演</p>
+        <p>日時 : <span id="last-day"></span></p>
+        <p>会場 : <span id="last-place"></span></p>
+      </div>
+      <button id="confirm-btn">抽選結果を確認する</button>
+    </div>
+
+    <div class="result-range hidden">
+      <p>整理番号 : <span id="num-message"></span></p>
+      <div class="result-contents">
+        <p class="result-title">抽選結果</p>
+        <span id="result"></span>
+        <p class="message hidden" id="result-message"></p>
+        <div class="winner-message hidden">
+          <p class="result-title">入金確認</p>
+          <span class="result-element">未入金</span>
+          <p class="result-title">当選公演</p>
+          <span id="result-place"></span>
+          <p class="result-element" id="result-day"></p>
+        </div>
+      </div>
+      <button id="close">閉じる</button>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
