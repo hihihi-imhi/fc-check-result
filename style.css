@@ -10,7 +10,14 @@ button {
   height: 30px;
   width: 300px;
   font-size: 10px;
-  background-color: #307899;
+  /* background-color: #307899; */
+  background-image: linear-gradient(
+    90deg,
+    #4576c9,
+    #58a7d8 43%,
+    #61bfdf 74%,
+    #88d8ec
+  );
   border: none;
   color: white;
   border-radius: 20px;
