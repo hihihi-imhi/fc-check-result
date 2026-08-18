@@ -15,7 +15,7 @@ const resultDay = document.getElementById("result-day");
 let Month = Math.floor(Math.random() * 12) + 1;
 let day = Math.floor(Math.random() * 30) + 1;
 
-const obj = {
+const resultData = {
   1: {
     result: "第１希望当選",
     resultMessage: "チケットのご用意ができました",
@@ -75,14 +75,14 @@ function confrim() {
       const winnerMsg = document.querySelector(".winner-message");
 
       if (Math.random() < 0.3) {
-        const id = obj[1];
+        const id = resultData[1];
         result.textContent = id.result;
         resultMsg.classList.add("hidden");
         winnerMsg.classList.remove("hidden");
         resultPlace.textContent = place.value;
         resultDay.textContent = `2026年${Month}月${day}日`;
       } else {
-        const id = obj[2];
+        const id = resultData[2];
         resultMsg.classList.remove("hidden");
         winnerMsg.classList.add("hidden");
         result.textContent = id.result;
